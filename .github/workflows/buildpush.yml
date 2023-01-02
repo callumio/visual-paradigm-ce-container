@@ -48,6 +48,13 @@ jobs:
         password:  ${{ secrets.DOCKER_HUB_SECRET }}
         extra-args: |
             --disable-content-trust
+    - name: Docker Hub README & Description
+      uses: meeDamian/sync-readme@v1.0.6
+      with:
+        user:  ${{ github.repository_owner }}
+        pass:  ${{ secrets.DOCKER_HUB_SECRET }}
+        slug: ${{ github.repository_owner }}/${{ steps.build_image.outputs.image }}
+        description: true
     - name: Echo outputs
       run: |
         echo "${{ toJSON(steps.push_ghcr.outputs) }}"

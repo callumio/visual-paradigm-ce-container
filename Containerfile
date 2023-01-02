@@ -1,5 +1,7 @@
 FROM debian:latest
 
+LABEL maintainer="git@cleslie.uk"
+
 ENV _JAVA_AWT_WM_NONREPARENTING=1
 ENV PUID=1000
 ENV PGID=1000

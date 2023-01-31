@@ -1,8 +1,10 @@
-# Visual Paradigm CE Dockerised
+# Visual Paradigm CE Containerised
 
 ### Notes
 
 Due to how the Visual Paradigm script is designed, after configuring the license on the first run the container may stop and require restarting. This is normal behaviour and should only happen on the first run (fix in progress).
+
+I build and run this using `podman`, no support will be provided for `docker` or other container engines
 
 ## Usage
 
@@ -10,21 +12,21 @@ Due to how the Visual Paradigm script is designed, after configuring the license
 
 Podman
 
-- `podman run -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm callumio/visual-paradigm-ce`
+- `podman run -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 Docker
 
-- `TODO`
+- `docker urn -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 ### With Environment Variables
 
 Podman
 
-- `podman run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm callumio/visual-paradigm-ce`
+- `podman run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 Docker
 
-- `TODO`
+- `docker run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 ## Configuration
 

@@ -12,21 +12,21 @@ I build and run this using `podman`, no support will be provided for `docker` or
 
 Podman
 
-- `podman run -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
+- `podman run -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 Docker
 
-- `docker urn -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
+- `docker urn -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 ### With Environment Variables
 
 Podman
 
-- `podman run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
+- `podman run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 Docker
 
-- `docker run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/<YOUR USER>/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
+- `docker run -d -e DISPLAY=:0 -e PUID=1000 -e PGID=1000 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 ## Configuration
 
@@ -37,7 +37,7 @@ Docker
 | `PUID`                          | User Identifier (Volume Permissions)                           | `1000`                          |
 | `PGID`                          | Group Identifier (Volume Permissions)                          | `1000`                          |
 | `DISPLAY`                       | X Display ID                                                   | `:0`                            |
-| `_JAVA_AWT_WM_NONREPARENTING` | For (X)Wayland compatibility until OpenJDK Wakefield is usable | `1`                             |         
+| `_JAVA_AWT_WM_NONREPARENTING`   | For (X)Wayland compatibility until OpenJDK Wakefield is usable | `1`                             |         
 
 ### Volumes
 

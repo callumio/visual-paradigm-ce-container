@@ -16,7 +16,7 @@ Podman
 
 Docker
 
-- `docker urn -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
+- `docker run -d --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$(whoami)/.config/VisualParadigm:/root/.config/VisualParadigm:rw" --rm docker.io/callumio/visual-paradigm-ce`
 
 ### With Environment Variables
 

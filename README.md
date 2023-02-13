@@ -4,7 +4,7 @@
 
 Due to how the Visual Paradigm script is designed, after configuring the license on the first run the container may stop and require restarting. This is normal behaviour and should only happen on the first run (fix in progress).
 
-I build and run this using `podman`, no support will be provided for `docker` or other container engines
+I build and run this using `podman` on Linux, no support will be provided for `docker`, other container engines or other operating systems.
 
 ## Usage
 
